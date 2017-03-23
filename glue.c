@@ -29,7 +29,7 @@ if ((___err = SEND_MIDI (src, i)) == ___FIX(___NO_ERR)) {
 
 
 //int _send_midi(uint8_t *msg, size_t size) {
-int SEND_MIDI(___SCMOBJ msg, size_t size) {
+int SEND_MIDI(___SCMOBJ msg, int size) {
 
      struct midi_msg midi;
 
@@ -50,7 +50,7 @@ int SEND_MIDI(___SCMOBJ msg, size_t size) {
 	  midi.msg[i] = c_int;
 	  lst = ___CDR(lst);
      }
-     midi.size = size;
+     midi.size = (size_t) size;
 //     fprintf(stderr, "m1: %x m2: %x m3: %x\n", midi.msg[0], midi.msg[1], midi.msg[2]);
 
 

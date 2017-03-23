@@ -125,7 +125,7 @@ struct js_event input_event;
 
 ;;; Functions to interact with JackAudioServer
 (define setup-jack (c-lambda () int "_setup_jack"))
-(define send-midi (c-lambda (scheme-object size_t) int "int res = SEND_MIDI(___arg1, ___arg2);  ___return(res);"))
+(define send-midi (c-lambda (scheme-object int) int "int res = SEND_MIDI(___arg1, ___arg2);  ___return(res);"))
 
 
 ;;; Functions to interact with joystick device file
