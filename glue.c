@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <unistd.h>
-#include <gambit.h>
 #include <stdio.h>
 #include <jack/ringbuffer.h>
 
